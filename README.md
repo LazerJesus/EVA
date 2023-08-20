@@ -6,6 +6,8 @@
 EVA (Emacs Virtual Assistant) is a groundbreaking project that aims to integrate a coding/agent LLM (Language Model) within Emacs, using it as its runtime or body. Leveraging Emacs' text-based nature, continuous runtime, architectural openness, and vast tooling, EVA seeks to create a symbiotic relationship between Emacs and LLMs, enabling powerful text operations and creative possibilities.
 <div style="clear: both;"></div>
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 <hr/> 
 <!-- ## About -->
 
