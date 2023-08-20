@@ -1,5 +1,35 @@
 
-# Table of Contents
+<a id="org22d398b"></a>
+
+# EVA - Emacs Virtual Assistant
+
+
+<a id="org7009272"></a>
+
+
+## About
+| | |
+|:---|:---|
+| EVA (Emacs Virtual Assistant) is a groundbreaking project that aims to integrate a coding/agent LLM (Language Model) within Emacs, using it as its runtime or body. Leveraging Emacs’ text-based nature, continuous runtime, architectural openness, and vast tooling, EVA seeks to create a symbiotic relationship between Emacs and LLMs, enabling powerful text operations and creative possibilities. | ![EVA Image](./assets/EVA.png) |
+
+## About
+
+<table>
+  <tr>
+    <td valign="top" width="50%">
+
+EVA (Emacs Virtual Assistant) is a groundbreaking project that aims to integrate a coding/agent LLM (Language Model) within Emacs, using it as its runtime or body. Leveraging Emacs’ text-based nature, continuous runtime, architectural openness, and vast tooling, EVA seeks to create a symbiotic relationship between Emacs and LLMs, enabling powerful text operations and creative possibilities.
+
+    </td>
+    <td valign="top" width="50%">
+      <img src="./assets/EVA.png" alt="EVA Image" width="300"/>
+    </td>
+  </tr>
+</table>
+
+<a id="orgd2e0783"></a>
+
+## Table of Contents
 
 1.  [EVA - Emacs Virtual Assistant](#org22d398b)
     1.  [About](#org7009272)
@@ -22,30 +52,6 @@
     9.  [Demo of Current Capabilities](#org67624da)
         1.  [License](#org801a626)
 
-
-<a id="org22d398b"></a>
-
-# EVA - Emacs Virtual Assistant
-
-
-<a id="org7009272"></a>
-
-## About
-
-<table>
-  <tr>
-    <td valign="top" width="50%">
-
-EVA (Emacs Virtual Assistant) is a groundbreaking project that aims to integrate a coding/agent LLM (Language Model) within Emacs, using it as its runtime or body. Leveraging Emacs’ text-based nature, continuous runtime, architectural openness, and vast tooling, EVA seeks to create a symbiotic relationship between Emacs and LLMs, enabling powerful text operations and creative possibilities.
-
-    </td>
-    <td valign="top" width="50%">
-      <img src="./assets/EVA.png" alt="EVA Image" width="300"/>
-    </td>
-  </tr>
-</table>
-
-<a id="orgd2e0783"></a>
 
 ## State of the Project
 
