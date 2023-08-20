@@ -2,40 +2,13 @@
 
 <a id="org7009272"></a>
 
-<img src="assets/EVA-350.jpg" align="left" />
+<img src="assets/EVA-350.jpg" align="right" />
 EVA (Emacs Virtual Assistant) is a groundbreaking project that aims to integrate a coding/agent LLM (Language Model) within Emacs, using it as its runtime or body. Leveraging Emacs' text-based nature, continuous runtime, architectural openness, and vast tooling, EVA seeks to create a symbiotic relationship between Emacs and LLMs, enabling powerful text operations and creative possibilities.
 <div style="clear: both;"></div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-<hr/> 
-<!-- ## About -->
-
-<!-- <table> -->
-<!--   <tr> -->
-<!--     <td valign="top" width="50%"> -->
-<!--       <img src="./assets/EVA.jpg" alt="EVA Image" width="300"/> -->
-<!--     </td> -->
-<!--     <td valign="top" width="50%"> -->
-<!-- EVA (Emacs Virtual Assistant) is a groundbreaking project that aims to integrate a coding/agent LLM (Language Model) within Emacs, using it as its runtime or body. Leveraging Emacs’ text-based nature, continuous runtime, architectural openness, and vast tooling, EVA seeks to create a symbiotic relationship between Emacs and LLMs, enabling powerful text operations and creative possibilities. -->
-<!--     </td> -->
-<!--   </tr> -->
-<!-- </table> -->
-
-
-<!-- ## About  -->
-<!-- <div style="display: flex; flex-wrap: wrap;"> -->
-<!--   <div style="flex: 1; max-width: 50%;"> -->
-<!--     <img src="./assets/EVA.jpg" alt="EVA Image" style="width: 100%; max-width: 600px;"/> -->
-<!--   </div> -->
-<!--   <div style="flex: 1; padding-right: 20px; min-width: 300px; max-width: 50%;"> -->
-<!--     EVA (Emacs Virtual Assistant) is a groundbreaking project that aims to integrate a coding/agent LLM (Language Model) within Emacs, using it as its runtime or body. Leveraging Emacs’ text-based nature, continuous runtime, architectural openness, and vast tooling, EVA seeks to create a symbiotic relationship between Emacs and LLMs, enabling powerful text operations and creative possibilities. -->
-<!--   </div> -->
-<!-- </div> -->
-
 <a id="orgd2e0783"></a>
 
-## Table of Contents
+## ToC
 
 1.  [About](#org7009272)
 2.  [State of the Project](#orgd2e0783)
@@ -47,7 +20,6 @@ EVA (Emacs Virtual Assistant) is a groundbreaking project that aims to integrate
 
 
 ## State of the Project
-
 
 <a id="org4c6d1c6"></a>
 
