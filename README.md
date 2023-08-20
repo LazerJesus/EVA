@@ -8,15 +8,7 @@ EVA (Emacs Virtual Assistant) is a groundbreaking project that aims to integrate
 
 <a id="orgd2e0783"></a>
 
-## ToC
-
-1.  [About](#org7009272)
-2.  [State of the Project](#orgd2e0783)
-3.  [Overview of the Architecture](#org1f865f3)
-4.  [Guide and Request for Contributions](#orga0b19f6)
-7.  [Contact](#org5d74d2d)
-8.  [Installation and Running Instructions](#org7e13b03)
-9.  [Demo of Current Capabilities](#org67624da)
+[Github](https://github.com/LazerJesus/EVA) | [Hugginface](https://huggingface.co/lazerjesus/eva) | [Article](https://finnfrotscher.com/posts/ai-and-emacs/)
 
 
 ## State of the Project
