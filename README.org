@@ -1,0 +1,73 @@
+* EVA - Emacs Virtual Assistant
+:PROPERTIES:
+:END:
+
+** About
+<div style="display: flex; flex-wrap: wrap;">
+  <div style="flex: 1; padding-right: 20px; min-width: 300px; max-width: 50%;">
+    <!-- Your About text goes here -->
+    EVA (Emacs Virtual Assistant) is a groundbreaking project that aims to integrate a coding/agent LLM (Language Model) within Emacs, using it as its runtime or body. Leveraging Emacs' text-based nature, continuous runtime, architectural openness, and vast tooling, EVA seeks to create a symbiotic relationship between Emacs and LLMs, enabling powerful text operations and creative possibilities.
+  </div>
+  <div style="flex: 1; max-width: 50%;">
+    <!-- Embed your image here -->
+    <img src="./assets/EVA.png" alt="EVA Image" style="width: 100%; max-width: 600px;"/>
+  </div>
+</div>
+#+END_HTML
+
+
+** State of the Project
+*** Now (Alpha)
+The basic parts of the architecture are in place, including a setup for training, the model, an API, and a basic client. Currently, the model can perform basic Elisp operations like math, window, and file management.
+*** Next
+Build a helpful LLM/agent that can be trusted to perform rudimentary coding tasks.
+*** Later
+The possibilities are limited only by creativity. Emacs and LLMs offer a match made in heaven, opening doors to innovative applications and functionalities.
+
+** Overview of the Architecture
+EVA consists of an Emacs client that communicates with an LLM model hosted on a CUDA GPU-enabled server. The server runs a Flask app inside a Jupyter notebook, providing an API consumed by the Emacs client using Elisp native utilities. The output from the LLM is directly piped into the Elisp interpreter, allowing seamless interaction and execution.
+
+** Guide and Request for Contributions
+Contributing to EVA is simple and rewarding, with tasks ranging from 10 minutes to ongoing efforts. We are in the early stages of a potentially decade-long project, offering both freedoms and responsibilities. Here's how you can contribute:
+
+*** Use Cases and Data
+    - Write examples of tasks and corresponding Elisp code.
+    - Adapt existing datasets to Elisp.
+    - Administer others' contributions.
+    - Capture and annotate Elisp during daily Emacs usage.
+
+*** Model Creation
+    - Experiment with base models and fine-tuning.
+    - Develop continuous training and distribution systems.
+    - Create models for various hardware, local and cloud.
+    - Explore distributed training methods.
+
+*** Application Development
+    - Build an Emacs package for communication between the model and Emacs.
+    - Consider UI/UX aspects, safeguards, utility functions, and agent tooling.
+    - Develop chain-of-thought architectures and sub-agents.
+
+*** Hacker User
+    - Use EVA to solve problems and write about your experiences.
+
+
+** Model Card
+*** Model Details
+The current model is fine-tuned on top of a 3b foundation model with a 300m Lora adapter.
+*** Training Data
+The model was trained on 18,000 rows of instruction + Elisp pairs, covering topics from math to file administration. Most of the data was AI-generated.
+
+** Insights and Examples of Data
+The training data consists of a diverse range of topics, primarily focusing on Elisp operations. Examples include basic math operations, file management tasks, and more complex coding routines.
+
+** Contact
+Feel free to reach out on Discord @lazerjesus or create a GitHub issue.
+
+** Installation and Running Instructions
+(To be provided by the project maintainer)
+
+** Demo of Current Capabilities
+(To be provided or described by the project maintainer)
+
+*** License
+(If applicable)
