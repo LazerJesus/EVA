@@ -9,16 +9,9 @@
 
 ## About
 
-<img src="assets/EVA.jpg" max-width="250px"  style="max-width: 250px;"  />
-
+<img src="assets/EVA-350.jpg" align="left" />
 EVA (Emacs Virtual Assistant) is a groundbreaking project that aims to integrate a coding/agent LLM (Language Model) within Emacs, using it as its runtime or body. Leveraging Emacs' text-based nature, continuous runtime, architectural openness, and vast tooling, EVA seeks to create a symbiotic relationship between Emacs and LLMs, enabling powerful text operations and creative possibilities.
-
-## About
-| | |
-|:---|:---|
-| ![EVA Image](./assets/EVA.jpg) | EVA (Emacs Virtual Assistant) is a groundbreaking project that aims to integrate a coding/agent LLM (Language Model) within Emacs, using it as its runtime or body. Leveraging Emacs’ text-based nature, continuous runtime, architectural openness, and vast tooling, EVA seeks to create a symbiotic relationship between Emacs and LLMs, enabling powerful text operations and creative possibilities. |
-
-
+<br/>
 <!-- ## About -->
 
 <!-- <table> -->
@@ -47,26 +40,13 @@ EVA (Emacs Virtual Assistant) is a groundbreaking project that aims to integrate
 
 ## Table of Contents
 
-1.  [EVA - Emacs Virtual Assistant](#org22d398b)
-    1.  [About](#org7009272)
-    2.  [State of the Project](#orgd2e0783)
-        1.  [Now (Alpha)](#org4c6d1c6)
-        2.  [Next](#org1346bcb)
-        3.  [Later](#org21ccbd6)
-    3.  [Overview of the Architecture](#org1f865f3)
-    4.  [Guide and Request for Contributions](#orga0b19f6)
-        1.  [Use Cases and Data](#org2742825)
-        2.  [Model Creation](#org64f3ce6)
-        3.  [Application Development](#org720c6cc)
-        4.  [Hacker User](#org71cc2f9)
-    5.  [Model Card](#org647d739)
-        1.  [Model Details](#org48e8dd7)
-        2.  [Training Data](#org991df2d)
-    6.  [Insights and Examples of Data](#orgfaf5fc0)
-    7.  [Contact](#org5d74d2d)
-    8.  [Installation and Running Instructions](#org7e13b03)
-    9.  [Demo of Current Capabilities](#org67624da)
-        1.  [License](#org801a626)
+1.  [About](#org7009272)
+2.  [State of the Project](#orgd2e0783)
+3.  [Overview of the Architecture](#org1f865f3)
+4.  [Guide and Request for Contributions](#orga0b19f6)
+7.  [Contact](#org5d74d2d)
+8.  [Installation and Running Instructions](#org7e13b03)
+9.  [Demo of Current Capabilities](#org67624da)
 
 
 ## State of the Project
