@@ -3,7 +3,7 @@
 EVA is the first AI trained to work along side you, in Emacs.
 The goal is to have her take on more and more of the actual manipulation of Emacs and its buffer content, while the human provides instructions and feedback. <!-- The goal is to have you converse and reason with her, while she takes on execution.  -->
 This is to be achieved through a combination of a general-purpose language model and several specialized agents (coding, reasoning, memory, or [contribute](#contribution) your own); all trained on elisp and emacs usage.
-The project is under active development and has not yet launched. If you haven't yet, read the announcement [article](https://finnfrotscher.com/posts/eva-emacs-virtual-assistant/).
+The project is under active development and has not yet launched. If you haven't yet, read the announcement [Article](https://finnfrotscher.com/posts/eva-emacs-virtual-assistant/).
 
 My motivation for writing the article and this repository is (1) to convince you to contribute your valuable brainjuices to this project and (2) to serve as a ground zero for a conversation about the model and application we are going to develop over the coming months and years. Hopefully.
 
