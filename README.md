@@ -1,139 +1,91 @@
 # EVA - Emacs Virtual Assistant
-
-<a id="org7009272"></a>
-
 <img src="assets/EVA-350.jpg" align="right" />
-EVA (Emacs Virtual Assistant) is a groundbreaking project that aims to integrate a coding/agent LLM (Language Model) within Emacs, using it as its runtime or body. Leveraging Emacs' text-based nature, continuous runtime, architectural openness, and vast tooling, EVA seeks to create a symbiotic relationship between Emacs and LLMs, enabling powerful text operations and creative possibilities.
+EVA is the first AI trained to work along side you, in Emacs.
+The goal is to have her take on more and more of the actual manipulation of Emacs and its buffer content, while the human provides instructions and feedback. <!-- The goal is to have you converse and reason with her, while she takes on execution.  -->
+This is to be achieved through a combination of a general-purpose language model and several specialized agents (coding, reasoning, memory, or [contribute your own](#contribution)); all trained on elisp and emacs usage.
+The project is under active development and has not yet launched. If you haven't yet, read the [announcement article](https://finnfrotscher.com/posts/eva-emacs-virtual-assistant/).
+
+My motivation for writing the article and this repository is (1) to convince you to contribute your valuable brainjuices to this project and (2) to serve as a ground zero for a conversation about the model and application we are going to develop over the coming months and years. Hopefully.
+
 <div style="clear: both;"></div>
 
-<a id="orgd2e0783"></a>
+| [Article](https://finnfrotscher.com/posts/eva-emacs-virtual-assistant/)
+| [Huggingface](https://huggingface.co/lazerjesus/eva) 
+| [Github](https://github.com/lazerjesus/eva) 
+| [Discord](https://discord.gg/9Uxn45ADJs)
 
-[Github](https://github.com/LazerJesus/EVA) | [Hugginface](https://huggingface.co/lazerjesus/eva) | [Article](https://finnfrotscher.com/posts/ai-and-emacs/)
+## Roadmap
+we have a few questions to answer before we can start building.
+on a high level those are (1) what do we launch first (2) how do we get data and (3) what do we build next.
+I have some ideas but I would love to hear yours. My ideas are summarized in challanges and strategy below. Please join the [Discord](https://discord.gg/9Uxn45ADJs) to discuss and contribute.
+
+## Challanges
+We are constrained in multiple dimensions and I see a few ways this project could go sideways. Those are data, ambition and timing. 
+
+### Data
+LLMs require large amounts of specific, high quality data and no such dataset exists for Emacs. We need data to train EVA to use Emacs. 
+
+### Ambition
+Getting lost in an overly large vision and not providing value immediately.
+
+### Timing
+Timing, or Performance. We are still very early in the development of LLMs, GPUs and the performance might just not be there yet. Maybe the model can't run on a local machines fast enough to provide a sane user with value. Maybe the model needs to be too large to be able to run locally. 
+
+## Strategy
+To solve these challanges I think we should focus on providing a small amount of value immediately and design the system in a way that allows us to add incremental value as the technology matures. Concretely this means that I think we should build and deploy a simple autocomplete system now. Probably based on Llama2. The value would be (1) that we start to build a community around the project. (2) That we provide immidiate value to users. (2) That we learn to run and deploy such a system in production. Then, in parallel, build out tools and methods for data aquisition and design custom models for specific, well defined tasks.
+
+I see two ways to get data. (1) We can generate it manually. Or (2) Users donate it. My sense is that it will be a combination of both. We provide a way for users to donate data, which is used to train the foundation model. And we maintain a high quality dataset by hand for finetuning the specific tasks and skills EVA should master.
 
 
-## State of the Project
 
-<a id="org4c6d1c6"></a>
-
-### Now (Alpha)
-
-The basic parts of the architecture are in place, including a setup for training, the model, an API, and a basic client. Currently, the model can perform basic Elisp operations like math, window, and file management.
-
-
-<a id="org1346bcb"></a>
-
-### Next
-
-Build a helpful LLM/agent that can be trusted to perform rudimentary coding tasks.
-
-
-<a id="org21ccbd6"></a>
-
-### Later
-
-The possibilities are limited only by creativity. Emacs and LLMs offer a match made in heaven, opening doors to innovative applications and functionalities.
-
-
-<a id="org1f865f3"></a>
-
+----------------------------------------------------OLD--FOR-REFERENCE--------------------------------------------------
 ## Overview of the Architecture
+The basic parts of the architecture are in place, including a setup for training, the model, an API, and a basic client.
 
+The model is trained on a small dataset of 18,000 rows of instruction + Elisp pairs, covering topics from math to file administration. Most of the data was AI-generated.
 EVA consists of an Emacs client that communicates with an LLM model hosted on a CUDA GPU-enabled server. The server runs a Flask app inside a Jupyter notebook, providing an API consumed by the Emacs client using Elisp native utilities. The output from the LLM is directly piped into the Elisp interpreter, allowing seamless interaction and execution.
 
+### Data
+The training data consists of a diverse range of topics, primarily focusing on Elisp operations. Examples include basic math operations, file management tasks, and more complex coding routines.
 
-<a id="orga0b19f6"></a>
-
-## Guide and Request for Contributions
-
-Contributing to EVA is simple and rewarding, with tasks ranging from 10 minutes to ongoing efforts. We are in the early stages of a potentially decade-long project, offering both freedoms and responsibilities. Here's how you can contribute:
-
-
-<a id="org2742825"></a>
+## Areas of possible contribution
+Contributing to EVA is possible on tasks ranging from one time 10 minutes to continuous long term efforts. 
+We are in the early stages of a potentially decade-long project, offering both freedoms and responsibilities. Here's how you can contribute:
 
 ### Use Cases and Data
-
 -   Write examples of tasks and corresponding Elisp code.
 -   Adapt existing datasets to Elisp.
 -   Administer others' contributions.
 -   Capture and annotate Elisp during daily Emacs usage.
 
-
-<a id="org64f3ce6"></a>
-
 ### Model Creation
-
 -   Experiment with base models and fine-tuning.
 -   Develop continuous training and distribution systems.
 -   Create models for various hardware, local and cloud.
 -   Explore distributed training methods.
 
-
-<a id="org720c6cc"></a>
-
 ### Application Development
-
 -   Build an Emacs package for communication between the model and Emacs.
 -   Consider UI/UX aspects, safeguards, utility functions, and agent tooling.
 -   Develop chain-of-thought architectures and sub-agents.
 
 
-<a id="org71cc2f9"></a>
-
-### Hacker User
-
--   Use EVA to solve problems and write about your experiences.
-
-
-<a id="org647d739"></a>
-
 ## Model Card
-
-
-<a id="org48e8dd7"></a>
-
 ### Model Details
-
 The current model is fine-tuned on top of a 3b foundation model with a 300m Lora adapter.
 
-
-<a id="org991df2d"></a>
-
 ### Training Data
-
 The model was trained on 18,000 rows of instruction + Elisp pairs, covering topics from math to file administration. Most of the data was AI-generated.
 
 
-<a id="orgfaf5fc0"></a>
-
-## Insights and Examples of Data
-
-The training data consists of a diverse range of topics, primarily focusing on Elisp operations. Examples include basic math operations, file management tasks, and more complex coding routines.
-
-
-<a id="org5d74d2d"></a>
-
 ## Contact
-
-Feel free to reach out on Discord @lazerjesus or create a GitHub issue.
-
-
-<a id="org7e13b03"></a>
+Feel free to join the [Discord](https://discord.gg/9Uxn45ADJs) or create a GitHub issue.
 
 ## Installation and Running Instructions
-
-(To be provided by the project maintainer)
-
-
-<a id="org67624da"></a>
+[... Following]
 
 ## Demo of Current Capabilities
+[... Following]
 
-(To be provided or described by the project maintainer)
 
-
-<a id="org801a626"></a>
-
-### License
-
-(If applicable)
 
