@@ -2,8 +2,10 @@
 <img src="assets/EVA-350.jpg" align="right" />
 EVA is the first AI trained to work along side you, in Emacs.
 The goal is to have her take on more and more of the actual manipulation of Emacs and its buffer content, while the human provides instructions and feedback. <!-- The goal is to have you converse and reason with her, while she takes on execution.  -->
-This is to be achieved through a combination of a general-purpose language model and several specialized agents (coding, reasoning, memory, or [contribute](#contribution) your own); all trained on elisp and emacs usage.
-The project is under active development and has not yet launched. If you haven't yet, read the announcement [Article](https://finnfrotscher.com/posts/eva-emacs-virtual-assistant/).
+This is to be achieved through a combination of a general-purpose language model and several specialized agents (coding, reasoning, memory, or [contribute](https://github.com/lazerjesus/eva#contribution) your own); all trained on elisp.
+The project is under active development and has not yet launched. There is a proof of concept system in place, but it does not yet provide any value beyond the proof of concept.
+
+If you haven't yet, read the announcement [Article](https://finnfrotscher.com/posts/eva-emacs-virtual-assistant/).
 
 My motivation for writing the article and this repository is (1) to convince you to contribute your valuable brainjuices to this project and (2) to serve as a ground zero for a conversation about the model and application we are going to develop over the coming months and years. Hopefully.
 
@@ -48,7 +50,7 @@ EVA consists of an Emacs client that communicates with an LLM model hosted on a 
 ### Data
 The training data consists of a diverse range of topics, primarily focusing on Elisp operations. Examples include basic math operations, file management tasks, and more complex coding routines.
 
-## Areas of possible contribution
+## Contribution
 Contributing to EVA is possible on tasks ranging from one time 10 minutes to continuous long term efforts. 
 We are in the early stages of a potentially decade-long project, offering both freedoms and responsibilities. Here's how you can contribute:
 
