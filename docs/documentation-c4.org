@@ -4,18 +4,25 @@
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
 Person(users, "Users", "Interacts with EVA through Emacs")
-System(emacs_pkg, "Emacs Package", "Provides Emacs interface for EVA")
-System(eva_sx, "eva.sx", "Hosted inference service")
-System(local_inference, "Local Inference", "Locally hosted inference service")
-System(eva, "EVA", "Language model trained for Emacs usage")
-System(training_env, "Training Environment", "Environment for model training")
-System(data, "Data", "Initially a CSV, planned to evolve into a dedicated system for data management")
+
+System_Boundary(inference, "Inference") {
+    Container(emacs_pkg, "Emacs Package", "Provides Emacs interface for EVA")
+    Container(eva_sx, "eva.sx", "Hosted inference service")
+    Container(local_inference, "Local Inference", "Local inference service")
+}
+
+Container(eva, "The Model", "Language model trained on elisp", "Stored on Huggingface")
+
+System_Boundary(training, "Training") {
+    Container(training_env, "Training Environment", "Jupyter environment for model training")
+    Container(data, "Data", "Initially a CSV, planned to evolve into a dedicated system for data management")
+}
 
 Rel(users, emacs_pkg, "Uses", "Emacs Interface")
-Rel(emacs_pkg, eva_sx, "Calls", "HTTP/HTTPS")
+Rel(emacs_pkg, eva_sx, "Calls", "Calls", "Hosted API")
 Rel(emacs_pkg, local_inference, "Calls", "Local API")
-Rel(eva_sx, eva, "Hosts", "Hosted API")
-Rel(local_inference, eva, "Uses", "Local API")
+Rel(eva_sx, eva, "Hosts", "Provides")
+Rel(local_inference, eva, "Uses", "Runs locally")
 Rel(training_env, eva, "Trains", "Jupyter Notebook")
 Rel(training_env, data, "Consumes", "CSV")
 
