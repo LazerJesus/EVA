@@ -1,0 +1,77 @@
+
+#+BEGIN_SRC plantuml :file context.png
+@startuml C4_Context
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Person(users, "Users", "Interacts with EVA through Emacs")
+System(emacs_pkg, "Emacs Package", "Provides Emacs interface for EVA")
+System(eva_sx, "eva.sx", "Hosted inference service")
+System(local_inference, "Local Inference", "Locally hosted inference service")
+System(eva, "EVA", "Language model trained for Emacs usage")
+System(training_env, "Training Environment", "Environment for model training")
+System(data, "Data", "Initially a CSV, planned to evolve into a dedicated system for data management")
+
+Rel(users, emacs_pkg, "Uses", "Emacs Interface")
+Rel(emacs_pkg, eva_sx, "Calls", "HTTP/HTTPS")
+Rel(emacs_pkg, local_inference, "Calls", "Local API")
+Rel(eva_sx, eva, "Hosts", "Hosted API")
+Rel(local_inference, eva, "Uses", "Local API")
+Rel(training_env, eva, "Trains", "Jupyter Notebook")
+Rel(training_env, data, "Consumes", "CSV")
+
+
+@enduml
+#+END_SRC
+
+   #+RESULTS:
+   [[file:context.png]]
+
+
+
+  
+#+BEGIN_SRC plantuml :file test.png
+@startuml C4_Containers
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Person(users, "Users", "Interacts with EVA through Emacs")
+
+System_Boundary(emacs_pkg, "Emacs Package") {
+    Container(emacs_client, "Emacs Client", "Elisp", "Provides interface for EVA in Emacs")
+}
+
+System_Boundary(eva_sx, "eva.sx") {
+    Container(api, "API", "Flask", "Hosted inference service")
+    Container(user_db, "User Database", "Database", "Stores user information")
+}
+
+System_Boundary(local_inference, "Local Inference") {
+    Container(local_api, "Local API", "Flask", "Locally hosted inference service")
+}
+
+System_Boundary(eva, "EVA") {
+    Container(llm_model, "LLM Model", "CUDA", "Language model for code completion and Emacs functionalities")
+}
+
+System_Boundary(training_env, "Training Environment") {
+    Container(jupyter_notebook, "Jupyter Notebook", "Jupyter", "Environment for model training")
+}
+
+System_Boundary(data, "Data") {
+    Container(csv_data, "CSV Data", "CSV", "Initial data storage")
+}
+
+Rel(users, emacs_client, "Uses", "Emacs Interface")
+Rel(emacs_client, api, "Calls", "HTTP/HTTPS")
+Rel(emacs_client, local_api, "Calls", "Local API")
+Rel(api, llm_model, "Hosts", "Hosted API")
+Rel(local_api, llm_model, "Uses", "Local API")
+Rel(jupyter_notebook, llm_model, "Trains", "Jupyter Notebook")
+Rel(jupyter_notebook, csv_data, "Consumes", "CSV")
+Rel(api, user_db, "Authenticates", "User DB")
+
+@enduml
+
+#+end_src
+
+#+RESULTS:
+[[file:test.png]]
