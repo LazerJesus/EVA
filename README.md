@@ -1,4 +1,4 @@
-# UNMAINTAINED CONCEPT
+# BENCHED CONCEPT
 # EVA - Emacs Virtual Assistant
 <img src="assets/EVA-350.jpg" align="right" />
 EVA is the first AI designed to work alongside you, in Emacs.
